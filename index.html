@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwiftCart</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet"/>
+</head>
+
+<body class="bg-base-200">
+
+     <!-- navbar -->
+<div class="navbar bg-base-100 shadow px-6 sticky top-0 z-50">
+  <div class="flex-1">
+    <a class="text-2xl font-bold text-primary">SwiftCart</a>
+  </div>
+
+  <div class="hidden md:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a>Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a>About</a></li>
+      <li><a>Contact</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <button class="btn btn-ghost">
+      🛒 <span id="cartCount" class="badge badge-primary ml-1">0</span>
+    </button>
+  </div>
+</div>
+
+
+     <!-- Banner section -->
+<div class="hero min-h-[70vh]" 
+style="background-image:url('./Image_File/banner-image.png');">
+  <div class="hero-overlay bg-opacity-60"></div>
+  <div class="hero-content text-center text-white">
+    <div>
+      <h1 class="text-5xl font-bold">Best Collection For You</h1>
+      <p class="py-6">Discover latest fashion & electronics.</p>
+      <button class="btn btn-primary">Shop Now</button>
+    </div>
+  </div>
+</div>
+
+
+              <!-- Features section -->
+<section class="py-16 text-center">
+  <h2 class="text-3xl font-bold mb-10">Why Choose Us</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6 px-10">
+    <div class="card bg-base-100 shadow p-6">
+      🚚
+      <h3 class="font-bold">Fast Delivery</h3>
+      <p>Quick doorstep delivery.</p>
+    </div>
+
+    <div class="card bg-base-100 shadow p-6">
+      🎧
+      <h3 class="font-bold">24/7 Support</h3>
+      <p>Always here to help.</p>
+    </div>
+
+    <div class="card bg-base-100 shadow p-6">
+      🔒
+      <h3 class="font-bold">Secure Payment</h3>
+      <p>100% secure transaction.</p>
+    </div>
+
+    <div class="card bg-base-100 shadow p-6">
+      🔄
+      <h3 class="font-bold">Easy Returns</h3>
+      <p>30 days return policy.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= TRENDING ================= -->
+<section class="py-16 px-10 bg-base-100">
+  <h2 class="text-3xl font-bold mb-8">Top Rated</h2>
+  <div id="trendingProducts" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+</section>
+
+
+
+
+          <!-- modal -->
+<dialog id="productModal" class="modal">
+  <div class="modal-box max-w-2xl">
+    <h3 id="modalTitle" class="font-bold text-lg mb-3"></h3>
+    <img id="modalImage" class="h-60 mx-auto object-contain mb-4"/>
+    <p id="modalDescription" class="mb-4"></p>
+    <p class="font-bold">Price: $<span id="modalPrice"></span></p>
+    <p>Rating: ⭐ <span id="modalRating"></span></p>
+
+    <div class="modal-action">
+      <button id="modalAddCart" class="btn btn-primary">Add to Cart</button>
+      <form method="dialog">
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+              <!-- footer -->
+<footer class="footer p-10 bg-neutral text-neutral-content">
+  <aside>
+    <h3 class="text-xl font-bold">SwiftCart</h3>
+    <p>© 2025 All rights reserved.</p>
+  </aside>
+
+  <nav>
+    <h6 class="footer-title">Quick Links</h6>
+    <a class="link link-hover">Home</a>
+    <a class="link link-hover">Products</a>
+  </nav>
+
+  <form>
+    <h6 class="footer-title">Newsletter</h6>
+    <div class="join">
+      <input class="input input-bordered join-item" placeholder="Email"/>
+      <button class="btn btn-primary join-item">Subscribe</button>
+    </div>
+  </form>
+</footer>
+
+<script src="./Js_File/script.js"></script>
+</body>
+</html>

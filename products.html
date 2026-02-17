@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products--SwiftCart</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet"/>
+</head>
+
+<body class="bg-base-200">
+
+<div class="navbar bg-base-100 shadow px-6">
+  <div class="flex-1">
+    <a href="index.html" class="text-2xl font-bold text-primary">SwiftCart</a>
+  </div>
+
+<div class="hidden md:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="index.html" >Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a>About</a></li>
+      <li><a>Contact</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <button class="btn btn-ghost">
+      🛒 <span id="cartCount" class="badge badge-primary ml-1">0</span>
+    </button>
+  </div>
+
+
+</div>
+
+
+
+
+
+<section class="p-10">
+  <h2 class="text-2xl font-bold mb-4">Categories</h2>
+  <div id="categories" class="flex flex-wrap gap-3 mb-6"></div>
+
+  <div id="products"
+  class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+</section>
+
+
+
+<dialog id="productModal" class="modal">
+  <div class="modal-box max-w-2xl">
+    <h3 id="modalTitle" class="font-bold text-lg mb-3"></h3>
+    <img id="modalImage" class="h-60 mx-auto object-contain mb-4"/>
+    <p id="modalDescription" class="mb-4"></p>
+    <p class="font-bold">Price: $<span id="modalPrice"></span></p>
+    <p>Rating: ⭐ <span id="modalRating"></span></p>
+
+    <div class="modal-action">
+      <button id="modalAddCart" class="btn btn-primary">Add to Cart</button>
+      <form method="dialog">
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+
+
+
+<section class="p-10">
+  <h2 class="text-3xl font-bold mb-6">All Products</h2>
+  <div id="products"
+  class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+</section>
+
+
+
+<script src="./Js_File/script.js"></script>
+</body>
+</html>
